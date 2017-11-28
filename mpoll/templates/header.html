@@ -1,0 +1,24 @@
+<!--header.html-->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <div class="navbar-brand" align = center>
+                趣投
+            </div>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="/">主页</a></li>
+            {% if username %}
+            <li><a href="/accounts/logout">退出</a></li>
+            <li><a href="/">添加投票</a></li>
+            <li><a href="/">修改密码</a></li>
+            <li><a href="/">修改电子邮件</a></li>
+            {% else %}
+            <li><a href="/accounts/login">登录</a></li>
+            <li><a href="/accounts/signup">注册</a></li>
+            {% endif %}
+            <li><a href="/admin">后台管理</a></li>
+            <li><a href="/content">联系管理员</a></li>
+        </ul>
+    </div>
+</nav>
